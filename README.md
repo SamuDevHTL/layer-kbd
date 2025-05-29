@@ -21,8 +21,8 @@
 ```
 j → Shift (when held) / j (when tapped)
 f → Shift (when held) / f (when tapped)
-d → Control (when held) / d (when tapped)
-k → Control (when held) / k (when tapped)
+a → Control (when held) / a (when tapped)
+: → Control (when held) / : (when tapped)
 l → Meta/Super (when held) / l (when tapped)
 s → Meta/Super (when held) / s (when tapped)
 CapsLock → Escape
@@ -92,8 +92,8 @@ The configuration is split into three main sections:
 # Modifier overloading
 j = overload(shift, j)
 f = overload(shift, f)
-d = overload(control, d)
-k = overload(control, k)
+a = overload(control, a)
+: = overload(control, :)
 l = overload(meta, l)
 s = overload(meta, s)
 
@@ -121,7 +121,7 @@ s = *
 
 1. **Modifier Keys**
    - Hold 'j' or 'f' for Shift
-   - Hold 'd' or 'k' for Control
+   - Hold 'a' or ':' for Control
    - Hold 'l' or 's' for Meta/Super
    - Tap these keys for normal letter input
 
@@ -140,11 +140,6 @@ s = *
 # Edit the configuration
 sudo nano /etc/keyd/default.conf
 
-# Adjust the modtap_delay value (in milliseconds)
-[settings]
-modtap_delay = 400
-```
-
 ### Adding New Mappings
 1. Edit the configuration:
 ```bash
@@ -153,5 +148,5 @@ sudo nano /etc/keyd/default.conf
 2. Add your mappings in the appropriate section
 3. Reload keyd:
 ```bash
-sudo keyd reload
+sudo systemctl restart keyd
 ```
