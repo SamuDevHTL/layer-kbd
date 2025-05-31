@@ -10,7 +10,8 @@
 
 ### 🎯 Core Features
 - Smart key overloading for common modifiers
-- AltGr layer for quick number and symbol access
+- Alt layer for quick numpad-style number input
+- AltGr layer for quick symbol access
 - CapsLock to Escape remapping for Vim users
 - Minimal configuration with maximum efficiency
 - Customizable modifier tap delay
@@ -28,16 +29,21 @@ s → Meta/Super (when held) / s (when tapped)
 CapsLock → Escape
 ```
 
+#### Alt Layer (Left Alt)
+```
+Numpad Layout:
+u → 7    i → 8    o → 9
+j → 4    k → 5    l → 6
+m → 1    , → 2    . → 3
+        n → 0
+```
+
 #### AltGr Layer (Right Alt)
 ```
-Numbers Row:
-q → 1    w → 2    e → 3    r → 4    t → 5
-y → 6    u → 7    i → 8    o → 9    p → 0
-
 Symbol Row:
 a → !    s → *    d → ^    f → $    
 c → +    v → =    z → _    x → -
-j → )    n → (    k → }    m → {    l → \
+n → (    h → )    y → }    b → {    p → \
 ```
 
 ## 🛠️ Prerequisites
@@ -101,18 +107,39 @@ s = overload(meta, s)
 capslock = esc
 ```
 
-### 3. AltGr Layer
+### 3. Alt Layer
+```
+[alt]
+# Numbers (Numpad Layout)
+u = 7
+i = 8
+o = 9
+j = 4
+k = 5
+l = 6
+m = 1
+, = 2
+. = 3
+n = 0
+```
+
+### 4. AltGr Layer
 ```
 [altgr]
-# Numbers
-q = 1
-w = 2
-...
-
 # Symbols
 a = !
 s = *
-...
+d = ^
+f = $
+c = +
+v = =
+z = _
+x = -
+n = (
+h = )
+y = }
+b = {
+p = \
 ```
 
 ## 🚀 Usage
@@ -126,11 +153,11 @@ s = *
    - Tap these keys for normal letter input
 
 2. **Number Input**
-   - Hold Right Alt + top row letters for numbers
-   - Example: RAlt + 'q' → 1, RAlt + 'w' → 2
+   - Hold Left Alt for numpad-style number input
+   - Example: Alt + 'u' → 7, Alt + 'k' → 5, Alt + 'space' → 0
 
 3. **Symbol Input**
-   - Hold Right Alt + letters for symbols
+   - Hold Right Alt (AltGr) for symbols
    - Example: RAlt + 'a' → !, RAlt + 's' → *
 
 ## 🔧 Customization
